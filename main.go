@@ -3,7 +3,6 @@ package main
 
 import (
 	"fmt"
-	"math/big"
 )
 
 // Main function will be called first
