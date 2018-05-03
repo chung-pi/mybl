@@ -1,5 +1,6 @@
 package main
 
+// Libraries used in functions
 import (
 	"bytes"
 	"crypto/sha256"
