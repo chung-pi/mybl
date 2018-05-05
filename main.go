@@ -1,4 +1,4 @@
-// This is an example of creating a blockchain and blocks
+// This is an example of doing Proof of Work
 package main
 
 import (
@@ -14,7 +14,7 @@ func main() {
 	bc.AddBlock("Send 1 BTC to Dr. Lam")
 	bc.AddBlock("Send 2 more BTC to Dr. Minh")
 
-  // Print a block
+	// Print blocks
 	for _, block := range bc.blocks {
 		fmt.Printf("Prev. hash: %x\n", block.PrevBlockHash)
 		fmt.Printf("Data: %s\n", block.Data)
