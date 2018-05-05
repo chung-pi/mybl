@@ -1,24 +1,9 @@
-// This is an example of doing Proof of Work
 package main
 
-import (
-	"fmt"
-)
-
-// Main function will be called first
 func main() {
-	// Create a new blockchain
 	bc := NewBlockchain()
+	defer bc.db.Close()
 
-  // Add blocks with arbitrary data
-	bc.AddBlock("Send 1 BTC to Dr. Lam")
-	bc.AddBlock("Send 2 more BTC to Dr. Minh")
-
-	// Print blocks
-	for _, block := range bc.blocks {
-		fmt.Printf("Prev. hash: %x\n", block.PrevBlockHash)
-		fmt.Printf("Data: %s\n", block.Data)
-		fmt.Printf("Hash: %x\n", block.Hash)
-		fmt.Println()
-	}
+	cli := CLI{bc}
+	cli.Run()
 }
