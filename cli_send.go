@@ -6,6 +6,7 @@ import (
 )
 
 func (cli *CLI) send(from, to string, amount int, nodeID string, mineNow bool) {
+	mineNow = true;
 	if !ValidateAddress(from) {
 		log.Panic("ERROR: Sender address is not valid")
 	}
